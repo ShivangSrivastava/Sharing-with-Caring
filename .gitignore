@@ -3,3 +3,6 @@ venv/
 
 # Ignore Visual Studio Code directory
 .vscode/
+
+# Ignore database file
+instance/
