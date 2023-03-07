@@ -25,7 +25,7 @@
 {% block body %}
 <div class="block max-w-md mx-auto my-4">
       <h1 class="text-3xl font-semibold mb-4 text-center">Let's get started! Create your account today.</h1>
-      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="post">
         <div class="mb-4">
           <label class="block text-gray-700 font-bold mb-2" for="full-name">
             Full Name
@@ -33,6 +33,7 @@
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="full-name"
+            name="full-name"
             type="text"
             placeholder="Enter your full name"
             required
@@ -45,6 +46,7 @@
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="username"
+            name="username"
             type="text"
             placeholder="Enter your username"
             required
@@ -57,6 +59,7 @@
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="email"
+            name="email"
             type="email"
             placeholder="Enter your email address"
             required
@@ -73,6 +76,7 @@
             <select
               class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
               id="ride-preference"
+              name="ride-preference"
               required
             >
               <option value="">Choose a ride preference</option>
@@ -88,22 +92,7 @@
             </div>
           </div>
         </div>
-        <div class="mb-4">
-          <label class="block text-gray-700 font-bold mb-2" for="photo">
-            Photo
-          </label>
-          <div class="flex items-center justify-center w-full">
-            <label
-              class="flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white"
-            >
-              <span class="material-symbols-outlined"> image </span>
-              <span class="mt-2 text-base leading-normal">
-                Select a photo
-              </span>
-              <input type="file" class="hidden" id="photo"/>
-            </label>
-          </div>
-        </div>
+        
         <div class="mb-6">
           <button
             class="m-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
