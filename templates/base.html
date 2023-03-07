@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css"
+    />
+
+    <link rel="icon" type="image/png" href="./static/images/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body class="min-h-screen">
+    {# navbar block start #}
+    <div class="bg-green-400 w-full p-0 m-0">
+    <div class="flex justify-between h-10">
+      <div class="text-right sm:hidden">
+        <span
+          class="material-symbols-outlined my-1 mx-4 cursor-default"
+          id="menu"
+        >
+          menu
+        </span>
+      </div>
+    </div>
+    {% block top_nav %} {% endblock %} {% block dashboard_nav %} {% endblock %}</div>
+    {# navbar block end #} {# main body start #} {% block body %}{% endblock %}
+    {# main body end #} {# footer block start #}
+    <footer class="bg-green-800 text-white py-6 h-auto bottom-0">
+      <div class="container mx-auto flex flex-col justify-between px-3">
+        <div>
+          <div class="flex flex-col items-center">
+            <h3 class="font-bold mb-2">About Us</h3>
+            <p class="mb-2">
+              Our team dedicates itself to preserving the environment and
+              supporting local communities.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-between">
+          <div class="flex flex-col items-center">
+            <h3 class="font-bold mb-2">Contact Us</h3>
+            <ul class="list-none">
+              <li>VBS Purvanchal University</li>
+              <li>Jaunpur, India</li>
+              <li>email@example.com</li>
+              <li>(123) 456-7890</li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <h3 class="font-bold mb-2">Our Team</h3>
+            <ul class="list-none">
+              <li>Yatndeep Dubey</li>
+              <li>Shivang Srivastava</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto mt-4 flex justify-center items-center">
+        <p>&copy; 2023 Sharing with Caring. All rights reserved.</p>
+      </div>
+    </footer>
+    {# footer block end #}
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#menu").click(function () {
+        $("#menuOptions").toggleClass("hidden");
+        if ($("#menu").text().trim() === "menu") {
+          $("#menu").text("close");
+        } else {
+          $("#menu").text("menu");
+        }
+      });
+    });
+  </script>
+</html>

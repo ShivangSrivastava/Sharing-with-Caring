@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %} 
+Login - Sharing with Caring
+{% endblock %}
+
+
+{% block top_nav %}
+  <div class="bg-green-400 w-full p-0 m-0">
+      <div
+        class="hidden sm:flex sm:visible sm:top-1 sm:absolute sm:left-0"
+        id="menuOptions"
+      >
+        <div class="text-center sm:mx-8 hover:underline">
+          <a href="/">Home</a>
+        </div>
+
+        <div class="text-center sm:mx-8 hover:underline">
+          <a href="/about">About</a>
+        </div>
+        <div class="text-center sm:mx-8 hover:underline">
+          <a href="/contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+
+{% block body %}
+
+     <div class="max-w-md mx-auto my-4">
+      <h1 class="text-3xl font-bold mb-4 text-center">Enter your credentials</h1>
+      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="email">
+            Email
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="email"
+            type="email"
+            placeholder="Enter your email address"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="password">
+            Password
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="password"
+            type="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        
+        <div class="mb-6">
+          <button
+            class="m-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >
+            Get started
+          </button>
+          <button
+            class="m-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button"
+            onclick="window.location.href='/signup'"
+          >
+            New here? Join us!
+          </button>
+          <button
+            class="m-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button"
+            onclick="window.location.href='/reset'"
+          >
+            Forgot your password? Let's get you back in.
+          </button>
+        </div>
+      </form>
+    </div>
+{% endblock  %}

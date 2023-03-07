@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+{% block title %} Sign Up - Sharing with Caring {% endblock %}
+
+
+{% block top_nav %}
+  <div class="bg-green-400 w-full p-0 m-0">
+      <div
+        class="hidden sm:flex sm:visible sm:top-1 sm:absolute sm:left-0"
+        id="menuOptions"
+      >
+        <div class="text-center sm:mx-8 hover:underline">
+          <a href="/">Home</a>
+        </div>
+
+        <div class="text-center sm:mx-8 hover:underline">
+          <a href="/about">About</a>
+        </div>
+        <div class="text-center sm:mx-8 hover:underline">
+          <a href="/contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+<div class="block max-w-md mx-auto my-4">
+      <h1 class="text-3xl font-semibold mb-4 text-center">Let's get started! Create your account today.</h1>
+      <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="full-name">
+            Full Name
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="full-name"
+            type="text"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="username">
+            Username
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="username"
+            type="text"
+            placeholder="Enter your username"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="email">
+            Email
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="email"
+            type="email"
+            placeholder="Enter your email address"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label
+            class="block text-gray-700 font-bold mb-2"
+            for="ride-preference"
+          >
+            Ride Preference
+          </label>
+          <div class="relative">
+            <select
+              class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+              id="ride-preference"
+              required
+            >
+              <option value="">Choose a ride preference</option>
+              <option value="car">Car</option>
+              <option value="bike">Bike</option>
+              <option value="bus">Bus</option>
+              <option value="train">Train</option>
+            </select>
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+            >
+              <span class="material-symbols-outlined"> expand_more </span>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="photo">
+            Photo
+          </label>
+          <div class="flex items-center justify-center w-full">
+            <label
+              class="flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white"
+            >
+              <span class="material-symbols-outlined"> image </span>
+              <span class="mt-2 text-base leading-normal">
+                Select a photo
+              </span>
+              <input type="file" class="hidden" id="photo"/>
+            </label>
+          </div>
+        </div>
+        <div class="mb-6">
+          <button
+            class="m-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >
+            Join
+          </button>
+          <button
+            class="m-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button"
+            onclick="window.location.href='/login'"
+          >
+            Returning user? Log in here
+          </button>
+          
+        </div>
+      </form>
+    </div>
+{% endblock  %}
+

@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block title %} Contact - Sharing with Caring {% endblock %}
+
+
+{% block top_nav %}
+  <div class="bg-green-400 w-full p-0 m-0">
+      <div
+        class="hidden sm:flex sm:visible sm:top-1 sm:absolute sm:left-0"
+        id="menuOptions"
+      >
+        <div class="text-center sm:mx-8 hover:underline">
+          <a href="/">Home</a>
+        </div>
+
+        <div class="text-center sm:mx-8 hover:underline">
+          <a href="/about">About</a>
+        </div>
+        <div class="text-center sm:mx-8 hover:underline">
+          <a href="/contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+  <main class="m-5 p-5 justify-center bg-center bg-cover bg-opacity-50 h-screen"
+      style="background-image: url('./static/images/background.jpg')">
+      <div class="max-w-7xl mx-auto py-12 sm:px-6 lg:px-8">
+        <div class="px-4 py-6 sm:px-0">
+          <h1 class="text-3xl font-bold leading-tight text-gray-000">
+            Contact Us
+          </h1>
+          <p class="mt-1 text-gray-300">
+            Send us a message and we'll get back to you as soon as possible.
+          </p>
+        </div>
+        <div class="mt-8 sm:flex">
+          <div class="sm:w-1/2 sm:pr-8">
+            <form>
+              <div>
+                <label
+                  for="name"
+                  class="block text-sm font-medium text-gray-200"
+                  >Name</label
+                >
+                <div class="mt-1">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                  />
+                </div>
+              </div>
+              <div class="mt-4">
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-200"
+                  >Email</label
+                >
+                <div class="mt-1">
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                  />
+                </div>
+              </div>
+              <div class="mt-4">
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-200"
+                  >Message</label
+                >
+                <div class="mt-1">
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="mt-8">
+                <button
+                  type="submit"
+                  class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+{% endblock  %}

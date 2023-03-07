@@ -1,0 +1,103 @@
+{% extends "base.html" %} {% block title %} Sharing with Caring - A Step towards
+Sustainable Development {% endblock %} {% block top_nav %}
+
+<div
+  class="hidden sm:flex sm:visible sm:top-1 sm:absolute sm:left-0"
+  id="menuOptions"
+>
+  <div class="text-center sm:mx-8 hover:underline">
+    <a href="/">Home</a>
+  </div>
+
+  <div class="text-center sm:mx-8 hover:underline">
+    <a href="/about">About</a>
+  </div>
+  <div class="text-center sm:mx-8 hover:underline">
+    <a href="/contact">Contact Us</a>
+  </div>
+</div>
+
+{% endblock %} {% block body %} {# header start #}
+<div
+  class="flex flex-col justify-center items-center bg-center bg-cover bg-opacity-50 h-screen"
+  style="background-image: url('./static/images/background.jpg')"
+>
+  <div>
+    <div class="flex flex-col items-center">
+      <img class="h-16 w-16" src="./static/images/logo.png" alt="logo" />
+      <div class="font-medium text-white text-center mb-2 cursor-default">
+        <span class="w-auto hover:font-semibold hover:text-green-900">S</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">h</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">a</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">r</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">i</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">n</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">g</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">-</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">w</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">i</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">t</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">h</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">- </span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">C</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">a</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">r</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">i</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">n</span>
+        <span class="w-auto hover:font-semibold hover:text-green-900">g</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-center items-center">
+    <button
+      class="bg-green-600 hover:bg-green-800 text-white font-medium py-2 px-4 rounded mr-2"
+      onclick="window.location.href='/login'"
+    >
+      Already a Member
+    </button>
+    <button
+      class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-medium py-2 px-4 rounded ml-2"
+      onclick="window.location.href='/signup'"
+    >
+      New here? Join us!
+    </button>
+  </div>
+</div>
+{# header end #} {# main body start #}
+<div id="blog">
+  {# left sided card start #}
+  <div class="flex flex-col p-5 sm:flex-row">
+    <img
+      src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&w=1000&q=80"
+      alt="image"
+      class="mx-auto my-5 rounded-lg justify-center items-center bg-center bg-cover object-contain h-64 sm:float-right"
+    />
+    <p class="mx-10 sm:float-left">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor esse
+      cupiditate eos iste consequatur officia consectetur iusto, nisi obcaecati
+      ex nemo perspiciatis ipsam quisquam quia laudantium, laboriosam doloribus
+      cum libero? Asperiores esse porro fugiat reprehenderit deleniti
+      repellendus amet, eius, ullam cum nam autem error repellat omnis
+      reiciendis magnam quo.
+    </p>
+  </div>
+  {# card end #} {# right sided card start #}
+  <div class="flex flex-col p-5 sm:flex-row-reverse">
+    <img
+      src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nnx8fGVufDB8fHx8&w=1000&q=80"
+      alt="image"
+      class="mx-auto my-5 rounded-lg justify-center items-center bg-center bg-cover object-contain h-64 sm:float-righ"
+    />
+    <p class="mx-10 sm:float-left">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor esse
+      cupiditate eos iste consequatur officia consectetur iusto, nisi obcaecati
+      ex nemo perspiciatis ipsam quisquam quia laudantium, laboriosam doloribus
+      cum libero? Asperiores esse porro fugiat reprehenderit deleniti
+      repellendus amet, eius, ullam cum nam autem error repellat omnis
+      reiciendis magnam quo.
+    </p>
+  </div>
+  {# card end #}
+</div>
+{# main body end #} {% endblock %}

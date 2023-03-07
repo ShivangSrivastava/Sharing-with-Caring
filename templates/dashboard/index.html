@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block title %} 
+Home - Sharing with Caring
+{% endblock %}
+
+
+{% block dashboard_nav %}
+  <div
+      class="hidden sm:flex sm:visible sm:top-1 sm:absolute sm:left-0"
+      id="menuOptions"
+    >
+      <div class="text-center sm:mx-8 hover:underline">
+        <a href="/dashboard">Home</a>
+      </div>
+      <div class="text-center sm:mx-8 hover:underline">
+        <a href="/dashboard/profile">Profile</a>
+      </div>
+      <div class="text-center sm:mx-8 hover:underline">
+        <a href="/dashboard/about">About</a>
+      </div>
+      <div class="text-center sm:mx-8 hover:underline">
+        <a href="/dashboard/contact">Contact Us</a>
+      </div>
+      <div class="text-center sm:mx-8 hover:underline">
+        <a href="/dashboard/logout">Logout</a>
+      </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+
+    {# ride request card start #}
+
+    <div class="m-5">
+      <div class="flex justify-center">
+        <div class="bg-white rounded-lg shadow-lg px-6 py-8 w-full max-w-lg">
+          <h2 class="text-2xl font-bold mb-6 text-center">Request a Ride</h2>
+
+          <form class="flex flex-col space-y-4">
+            <div class="flex flex-col">
+              <label for="start" class="font-medium mb-1"
+                >Start of Journey</label
+              >
+              <input
+                id="start"
+                type="text"
+                name="start"
+                placeholder="Enter starting location"
+                class="border rounded-lg px-4 py-2"
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <label for="end" class="font-medium mb-1">End of Journey</label>
+              <input
+                id="end"
+                type="text"
+                name="end"
+                placeholder="Enter destination"
+                class="border rounded-lg px-4 py-2"
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <label for="date" class="font-medium mb-1">Date of Journey</label>
+              <input
+                id="date"
+                type="date"
+                name="date"
+                class="border rounded-lg px-4 py-2"
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <label for="time" class="font-medium mb-1">Time of Journey</label>
+              <input
+                id="time"
+                type="time"
+                name="time"
+                class="border rounded-lg px-4 py-2"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    {# ride request card end #}
+
+    {# rides in process start #}
+    <div
+      class="bg-white rounded-lg shadow-lg sm:bg-transparent sm:shadow-none m-5 overflow-x-auto scrollbar scrollbar-thin scrollbar-track-gray-200 scrollbar-thumb-gray-500"
+    >
+      <div class="flex justify-center">
+        <div
+          class="sm:bg-white sm:rounded-lg sm:shadow-lg px-6 py-8 max-w-2xl w-full"
+        >
+          <h2 class="text-2xl font-bold mb-6 text-center">Rides in Process</h2>
+
+          <table class="w-full border-collapse">
+            <thead>
+              <tr>
+                <th class="border-b-2 p-3 whitespace-nowrap">#</th>
+                <th class="border-b-2 p-3 whitespace-nowrap">Start</th>
+                <th class="border-b-2 p-3 whitespace-nowrap">End</th>
+                <th class="border-b-2 p-3 whitespace-nowrap">Date & Time</th>
+                <th class="border-b-2 p-3 whitespace-nowrap">Requested By</th>
+                <th class="border-b-2 p-3 whitespace-nowrap">Ride Accepted</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border-b p-3">1</td>
+                <td class="border-b p-3">VBSPU Jaunpur</td>
+                <td class="border-b p-3">Jaunpur City</td>
+                <td class="border-b p-3">2023-03-10 10:00 AM</td>
+                <td class="border-b p-3">Shivang</td>
+                <td class="border-b p-3">
+                  <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  >
+                    Accept Ride
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    {# rides in process end #}
+
+{% endblock  %}
+
+
